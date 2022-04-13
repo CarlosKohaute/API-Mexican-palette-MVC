@@ -1,0 +1,8 @@
+{
+  "trailingConma": "all",
+  "singleQuote": true,
+  "endOfLine": "lf",
+  "tabwidrh": 2,
+  "arrowParens": "always",
+  "printWidth": 80
+}

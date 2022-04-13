@@ -1,0 +1,25 @@
+{ 
+ "name": "mexican-palette-mvc",
+  "description": "Marketplace of mexican palettes, user can include new pallete, edit or delete someone.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosKohaute/Mexican-palette-MVC.git"
+  },
+  "author": "Carlos Kohaute",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosKohaute/Mexican-palette-MVC/issues"
+  },
+  "homepage": "https://github.com/CarlosKohaute/Mexican-palette-MVC#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "init": "^0.1.2",
+    "node": "^17.7.2",
+    "npm": "^8.6.0"
+  }
+}
