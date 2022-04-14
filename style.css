@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: #2e8b57;
+  font-family: 'League Gothic', sans-serif;
+}
+
+.main {
+  position: relative;
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    #228b22 60%,
+    rgba(34, 139, 80, 0.5)
+  );
+
+  min-height: calc(100vh - 60px);
+  margin: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  color: black;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+}
+
+.main > h2 {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.main > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 350px) {
+  .home_container {
+    justify-content: unset;
+  }
+}
+
+.paletaLista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px 50px;
+}
+
+@media (max-width: 1220px) {
+  .paletaLista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.paletaCardItem,
+.paletaListaItem {
+  font-family: 'League Gothic', sans-serif;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 3em;
+  width: 20rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 400px) {
+  .paletaCardItem,
+  .paletaListaItem {
+    width: 210px;
+    height: 180px;
+  }
+}
+
+.paletaCardItem > div,
+.paletaListaItem > div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.paletaCardItem_sabor,
+.paletaListaItem_sabor {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 80%;
+}
+
+.paletaCardItem_descricao,
+.paletaListaItem_descricao {
+  font-size: 1em;
+}
+
+.paletaCardItem_preco,
+.paletaListaItem_preco{
+  color: darkviolet;
+}
+
+.paletaListaItem_foto{
+  height: 13rem;
+  margin-right: -6em;
+}
