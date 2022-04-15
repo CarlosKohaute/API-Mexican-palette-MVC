@@ -8,7 +8,7 @@
     "dev": "nodemon index"
   },
   "repository": {
-    "type": "git",
+    "type": "module",
     "url": "git+https://github.com/CarlosKohaute/Mexican-palette-MVC.git"
   },
   "author": "Carlos Kohaute",
