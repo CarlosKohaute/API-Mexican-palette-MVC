@@ -45,20 +45,20 @@ html {
   }
 }
 
-.paletaLista {
+.paletteList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 25px 50px;
 }
 
 @media (max-width: 1220px) {
-  .paletaLista {
+  .paletteList {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.paletaCardItem,
-.paletaListaItem {
+.paletteCardItem,
+.paletteListItem {
   font-family: 'League Gothic', sans-serif;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
@@ -69,38 +69,38 @@ html {
 }
 
 @media (max-width: 400px) {
-  .paletaCardItem,
-  .paletaListaItem {
+  .paletteCardItem,
+  .paletteListItem {
     width: 210px;
     height: 180px;
   }
 }
 
-.paletaCardItem > div,
-.paletaListaItem > div {
+.paletteCardItem > div,
+.paletteListItem > div {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
 
-.paletaCardItem_sabor,
-.paletaListaItem_sabor {
+.paletteCardItem_flavor,
+.paletteListItem_flavor {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 80%;
 }
 
-.paletaCardItem_descricao,
-.paletaListaItem_descricao {
+.paletteCardItem_description,
+.paletteListItem_description {
   font-size: 1em;
 }
 
-.paletaCardItem_preco,
-.paletaListaItem_preco{
+.paletteCardItem_price,
+.paletteListItem_price{
   color: darkviolet;
 }
 
-.paletaListaItem_foto{
+.paletteListItem_photo{
   height: 13rem;
   margin-right: -6em;
 }

@@ -1,45 +1,43 @@
 const express = require('express');
 const port = 3000;
 const app = express();
+const cors = require('cors');
 
 app.use(express.json());
+app.use(cors());
 
-const paletas = [
+const palettes = [
   {
     id: 1,
-    sabor: 'Creme',
-    descricao: 'Paleta de creme',
-    foto: 'https://thumbs.dreamstime.com/b/paleta-mexicana-59806469.jpg',
+    sabor: 'acai com leite condensado',
+    descricao: 'Paleta de acai com leite condensado',
+    foto: '/assets/images/acai-com-leite-condensado.png',
     preco: 10.0,
   },
   {
     id: 2,
     sabor: 'Banana com Nutella',
     descricao: 'Paleta de banana com nutella',
-    foto: 'https://i.pinimg.com/originals/da/4f/b4/da4fb4822a226b92185d5ee254bdad37.jpg',
+    foto: '/assets/images/banana-com-nutella.png',
     preco: 10.0,
   },
   {
     id: 3,
-    sabor: 'Chocolate Belga',
-    descricao: 'Paleta de chocolate belga',
-    foto: 'https://s3-sa-east-1.amazonaws.com/loja2/e0721e51a9e93cd0d8cf08d8e5a7a5eb.jpg',
+    sabor: 'Chocolate Belga com Brigadeiro',
+    descricao: 'Paleta de chocolate belga com brigadeiro',
+    foto: '/assets/images/chocolate-belga-com-brigadeiro.png',
     preco: 10.0,
   },
 ];
 
-app.get('/', function (req, res) {
-  res.send('Hello word');
+app.get('/palettes/find-palettes', (req, res) => {
+  res.send(palettes);
 });
 
-app.get('/paletas/find-paletas', (req, res) => {
-  res.send(paletas);
-});
-
-app.get('/paletas/find-paleta/:id', (req, res) => {
+app.get('/palettes/find-palettes/:id', (req, res) => {
   const idParam = req.params.id;
-  const chosenPaleta = paletas.find((paleta) => paleta.id == idParam);
-  res.send(chosenPaleta);
+  const chosenPalette = palettes.find((palette) => palette.id === idParam);
+  res.send(chosenPalette);
 });
 
 app.listen(port, () => {
