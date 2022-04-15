@@ -9,24 +9,24 @@ app.use(cors());
 const palettes = [
   {
     id: 1,
-    sabor: 'acai com leite condensado',
-    descricao: 'Paleta de acai com leite condensado',
-    foto: '/assets/images/acai-com-leite-condensado.png',
-    preco: 10.0,
+    flavor: 'acai com leite condensado',
+    description: 'Paleta de acai com leite condensado',
+    photo: '/assets/images/acai-com-leite-condensado.png',
+    price: 10.0,
   },
   {
     id: 2,
-    sabor: 'Banana com Nutella',
-    descricao: 'Paleta de banana com nutella',
-    foto: '/assets/images/banana-com-nutella.png',
-    preco: 10.0,
+    flavor: 'Banana com Nutella',
+    description: 'Paleta de banana com nutella',
+    photo: '/assets/images/banana-com-nutella.png',
+    price: 10.0,
   },
   {
     id: 3,
-    sabor: 'Chocolate Belga com Brigadeiro',
-    descricao: 'Paleta de chocolate belga com brigadeiro',
-    foto: '/assets/images/chocolate-belga-com-brigadeiro.png',
-    preco: 10.0,
+    flavor: 'Chocolate Belga com Brigadeiro',
+    description: 'Paleta de chocolate belga com brigadeiro',
+    photo: '/assets/images/chocolate-belga-com-brigadeiro.png',
+    price: 10.0,
   },
 ];
 
@@ -36,7 +36,7 @@ app.get('/palettes/find-palettes', (req, res) => {
 
 app.get('/palettes/find-palettes/:id', (req, res) => {
   const idParam = req.params.id;
-  const chosenPalette = palettes.find((palette) => palette.id === idParam);
+  const chosenPalette = palettes.find((palette) => palette.id == idParam);
   res.send(chosenPalette);
 });
 
