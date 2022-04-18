@@ -23,7 +23,7 @@ const updatePaletteController = (req, res) => {
     idParam,
     paletteEdit,
   );
-  res.sed(updatedPalette);
+  res.send(updatedPalette);
 };
 
 const deletePaletteController = (req, res) => {
