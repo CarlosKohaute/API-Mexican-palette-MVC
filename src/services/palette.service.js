@@ -33,9 +33,31 @@ const findAllPalettesService = () => {
   return palettes;
 };
 const findByIdPaletteService = (idParam) => {
-   return palettes.find((palette) => palette.id == idParam);
+  return palettes.find((palette) => palette.id == idParam);
+};
+
+const createPaletteService = (newPalette) => {
+  const newId = palettes.length + 1;
+  newPalette.id = newId;
+  palettes.push(newPalette);
+  return newPalette;
+};
+
+const updatePaletteService = (id, paletteEdited) => {
+  paletteEdited['id'] = id;
+  const paletteIndex = palettes.findIndex((palette) => palette.id == id);
+  palettes[paletteIndex] = paletteEdited;
+  return paletteEdited;
+};
+
+const deletePaletteService = (id) => {
+  const paletteIndex = palettes.findIndex((palette) => palette.id == id);
+  return palettes.splice(paletteIndex, 1);
 };
 module.exports = {
   findAllPalettesService,
-  findByIdPaletteService
+  findByIdPaletteService,
+  createPaletteService,
+  updatePaletteService,
+  deletePaletteService,
 };
